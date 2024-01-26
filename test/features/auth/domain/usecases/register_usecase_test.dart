@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_firebase_auth_template/core/error/failures.dart';
-import 'package:flutter_firebase_auth_template/features/auth/domain/usecases/login_usecase.dart';
 import 'package:flutter_firebase_auth_template/features/auth/domain/usecases/register_usecase.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';

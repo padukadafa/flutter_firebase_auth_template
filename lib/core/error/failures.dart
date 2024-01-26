@@ -24,3 +24,17 @@ class CacheFailure extends Failure {
   @override
   List<Object?> get props => [message];
 }
+
+class ValidationFailure extends Failure {
+  final String message;
+  ValidationFailure(this.message);
+  @override
+  List<Object?> get props => [message];
+}
+
+class UnknownFailure extends Failure {
+  final String message = "Something went wrong!";
+
+  @override
+  List<Object?> get props => [message];
+}

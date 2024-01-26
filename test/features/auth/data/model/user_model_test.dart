@@ -11,20 +11,20 @@ void main() {
     test("Should return a valid model when fromJson", () {
       final json = jsonDecode(fixture("user.json"));
       final result = UserModel.fromJson(json);
-      expect(result, tUserModel);
+      expect(result, equals(tUserModel));
     });
   });
   group("fromUser", () {
     test("Should return a valid model when convert User to UserModel", () {
       final result = UserModel.fromUser(tUser);
-      expect(result, tUserModel);
+      expect(result, equals(tUserModel));
     });
   });
   group("toJson", () {
     test("Should return a valid json when convert UserModel to json", () {
       final result = tUserModel.toJson();
       final json = jsonDecode(fixture("user.json"));
-      expect(result, json);
+      expect(result, equals(json));
     });
   });
   group("copyWith", () {
@@ -35,7 +35,7 @@ void main() {
         email: tUserModel2.email,
         name: tUserModel2.name,
       );
-      expect(result, tUserModel2);
+      expect(result, equals(tUserModel2));
     });
     test("Should return a valid UserModel when change only 1 property", () {
       final result = tUserModel.copyWith(uid: tUserModel2.uid);
