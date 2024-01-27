@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_firebase_auth_template/core/error/failures.dart';
 import 'package:flutter_firebase_auth_template/features/auth/domain/usecases/login_usecase.dart';
-import 'package:flutter_firebase_auth_template/features/auth/presentation/auth_repository.dart';
+import 'package:flutter_firebase_auth_template/features/auth/domain/repositories/auth_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -11,11 +11,11 @@ import 'login_usecase_test.mocks.dart';
 
 @GenerateNiceMocks([MockSpec<AuthRepository>()])
 void main() {
-  late LoginUsecase usecase;
+  late LoginUseCase usecase;
   late MockAuthRepository repository;
   setUp(() {
     repository = MockAuthRepository();
-    usecase = LoginUsecase(repository);
+    usecase = LoginUseCase(repository);
   });
 
   test("Should return User when login success", () async {
