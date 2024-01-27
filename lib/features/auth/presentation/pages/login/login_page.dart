@@ -1,11 +1,13 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_firebase_auth_template/core/widgets/app_layout.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return AppLayout(
+      child: Scaffold(),
+    );
   }
 }
