@@ -4,7 +4,7 @@ import 'package:flutter_firebase_auth_template/core/error/failures.dart';
 import 'package:flutter_firebase_auth_template/core/validators/validator.dart';
 import 'package:flutter_firebase_auth_template/features/auth/data/data_sources/remote/auth_remote_data_source.dart';
 import 'package:flutter_firebase_auth_template/features/auth/domain/entities/user.dart';
-import 'package:flutter_firebase_auth_template/features/auth/presentation/auth_repository.dart';
+import 'package:flutter_firebase_auth_template/features/auth/domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl extends AuthRepository {
   final AuthRemoteDataSource dataSource;

@@ -10,4 +10,10 @@ class AuthState extends Equatable {
   List<Object?> get props => [user];
 }
 
+class InitState extends AuthState {}
+
 class LoadingState extends AuthState {}
+
+class UserAuthenticatedState extends AuthState {
+  const UserAuthenticatedState({required super.user});
+}
