@@ -15,7 +15,7 @@ class AuthRepositoryImpl extends AuthRepository {
       await dataSource.forgotPassword(email);
       return const Right(null);
     } catch (e) {
-      return Left(UnknownFailure());
+      return const Left(UnknownFailure());
     }
   }
 
@@ -27,7 +27,7 @@ class AuthRepositoryImpl extends AuthRepository {
     } on AuthError catch (e) {
       return Left(AuthFailure(e.message));
     } catch (e) {
-      return Left(UnknownFailure());
+      return const Left(UnknownFailure());
     }
   }
 
@@ -37,7 +37,7 @@ class AuthRepositoryImpl extends AuthRepository {
       await dataSource.logout();
       return const Right(null);
     } catch (e) {
-      return Left(UnknownFailure());
+      return const Left(UnknownFailure());
     }
   }
 
@@ -62,7 +62,7 @@ class AuthRepositoryImpl extends AuthRepository {
     } on AuthError catch (e) {
       return Left(AuthFailure(e.message));
     } catch (e) {
-      return Left(UnknownFailure());
+      return const Left(UnknownFailure());
     }
   }
 }

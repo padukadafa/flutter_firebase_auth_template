@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_firebase_auth_template/core/error/errors.dart';
 import 'package:flutter_firebase_auth_template/features/auth/data/models/user_model.dart';
@@ -34,12 +36,15 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
       );
       return result;
     } on FirebaseAuthException catch (e) {
-      if (e.code == "user-not-found" || e.code == 'wrong-password') {
+      if (e.code == "user-not-found" ||
+          e.code == 'wrong-password' ||
+          e.code == "invalid-email") {
         throw AuthError("Email or password is invalid");
       }
       if (e.code == "user-disabled") {
         throw AuthError("User banned!");
       }
+      print(e.message ?? "");
       throw UnknownError();
     } catch (e) {
       throw UnknownError();

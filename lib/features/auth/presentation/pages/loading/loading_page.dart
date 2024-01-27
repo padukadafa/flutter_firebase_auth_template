@@ -32,7 +32,7 @@ class _LoadingPageState extends State<LoadingPage> {
       } else {
         Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (_) => const LoginPage()),
+          MaterialPageRoute(builder: (_) => LoginPage()),
           (route) => false,
         );
       }

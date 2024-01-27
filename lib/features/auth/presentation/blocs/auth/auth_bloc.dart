@@ -10,6 +10,7 @@ import 'package:flutter_firebase_auth_template/features/auth/domain/usecases/reg
 import 'package:flutter_firebase_auth_template/features/auth/presentation/blocs/auth/auth_event.dart';
 import 'package:flutter_firebase_auth_template/features/auth/presentation/blocs/auth/auth_state.dart';
 import 'package:flutter_firebase_auth_template/features/auth/presentation/pages/home/home_page.dart';
+import 'package:flutter_firebase_auth_template/features/auth/presentation/pages/login/login_page.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final LoginUseCase loginUsecase;
@@ -77,6 +78,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }, (r) {
         emit(InitState());
+        Navigator.pushAndRemoveUntil(event.context,
+            MaterialPageRoute(builder: (_) => LoginPage()), (route) => false);
         EasyLoading.dismiss();
       });
     });
