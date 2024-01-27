@@ -1,10 +1,10 @@
 name: flutter_firebase_auth_template
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.2.1 <4.0.0'
+  sdk: ">=3.2.1 <4.0.0"
 
 dependencies:
   dartz: ^0.10.1
@@ -21,6 +21,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   mockito: ^5.4.4
+  firebase_auth_mocks: ^0.13.0
+  mock_exceptions: ^0.8.2
 
 flutter:
   uses-material-design: true
