@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter_firebase_auth_template/features/auth/data/models/user_model.dart';
 
 abstract class AuthEvent {}
 
@@ -29,4 +30,15 @@ class ForgotPasswordEvent extends AuthEvent {
 class LogoutEvent extends AuthEvent {
   final BuildContext context;
   LogoutEvent(this.context);
+}
+
+class UpdateUserEvent extends AuthEvent {
+  final UserModel user;
+  UpdateUserEvent(this.user);
+}
+
+class UpdateAvatarEvent extends AuthEvent {
+  final String avatarUrl;
+  final BuildContext context;
+  UpdateAvatarEvent(this.context, {required this.avatarUrl});
 }

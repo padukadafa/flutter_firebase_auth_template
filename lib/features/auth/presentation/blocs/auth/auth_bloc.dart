@@ -83,5 +83,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         EasyLoading.dismiss();
       });
     });
+    on<UpdateUserEvent>((event, emit) {
+      emit(UserAuthenticatedState(user: event.user));
+    });
   }
 }
