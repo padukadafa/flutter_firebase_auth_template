@@ -3,7 +3,12 @@
 A flutter project that i made when i bored
 
 ## Screenshot
-
+<div>
+<img src="screenshots/Screenshot_1706423853.png" alt="Login Page" style="width:200px;float:left;"/>
+<img src="screenshots/Screenshot_1706423856.png" alt="Register Page" style="width:200px;float:left;"/>
+<img src="screenshots/Screenshot_1706423854.png" alt="Forgot Password Page" style="width:200px;float:left;"/>
+<img src="screenshots/Screenshot_1706423868.png" alt="Home Page" style="width:200px;float:left;"/>
+</div>
 
 ## Feature
 1. Login
