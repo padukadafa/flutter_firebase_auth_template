@@ -7,6 +7,7 @@ import 'package:flutter_firebase_auth_template/core/widgets/reuseable_text.dart'
 import 'package:flutter_firebase_auth_template/features/auth/presentation/blocs/auth/auth_bloc.dart';
 import 'package:flutter_firebase_auth_template/features/auth/presentation/blocs/auth/auth_event.dart';
 import 'package:flutter_firebase_auth_template/features/auth/presentation/blocs/auth/auth_state.dart';
+import 'package:flutter_firebase_auth_template/features/auth/presentation/pages/forgot_password/forgot_password_page.dart';
 import 'package:flutter_firebase_auth_template/features/auth/presentation/pages/login/widgets/login_form.dart';
 import 'package:flutter_firebase_auth_template/features/auth/presentation/pages/register/register_page.dart';
 
@@ -38,6 +39,20 @@ class LoginPage extends StatelessWidget {
                 formKey: _formKey,
                 emailController: emailController,
                 passwordController: passwordController,
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+              Container(
+                alignment: Alignment.centerRight,
+                margin: const EdgeInsets.symmetric(horizontal: 24),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => ForgotPasswordPage()));
+                  },
+                  child: ReuseableText("Forgot password?"),
+                ),
               ),
               const SizedBox(
                 height: 24,

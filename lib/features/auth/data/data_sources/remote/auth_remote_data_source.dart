@@ -18,6 +18,8 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
   Future<void> forgotPassword(String email) async {
     try {
       await firebaseAuth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw AuthError(e.message ?? "Something went wrong!");
     } catch (e) {
       throw UnknownError();
     }
@@ -44,7 +46,6 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
       if (e.code == "user-disabled") {
         throw AuthError("User banned!");
       }
-      print(e.message ?? "");
       throw UnknownError();
     } catch (e) {
       throw UnknownError();
