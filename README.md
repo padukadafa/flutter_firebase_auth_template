@@ -17,19 +17,20 @@ A flutter project that i made when i bored
 4. Logout
 
 ## Setup
-1. Goto firebase and create new project
-2. After that in project overview click flutter to setup
-3. Follow the instruction
-4. Clone this repository:
+
+1. Clone this repository:
    
    ```
    git clone https://github.com/padukadafa/flutter_firebase_auth_template.git
    ```
-5. open project
-6. and run pub get
+2. open project
+3. and run pub get
    ```
    flutter pub get
    ```
+4. Goto firebase and create new project
+5. After that in project overview click flutter to setup
+6. Follow the instruction
 7. run your virtual device and press F5 to run the project
 
 ## App Structure
